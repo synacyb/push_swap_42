@@ -9,7 +9,7 @@ int main(int arc, char **argv)
 		int number;
 
 		t_list	*stack_a;
-		int		*stack_b;
+		t_list	*stack_b;
 		t_list	*actual_node = NULL;
 
 		stack_a = NULL;
