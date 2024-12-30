@@ -25,8 +25,20 @@ int main(int arc, char **argv)
 				ft_lstadd_back(&stack_a, actual_node);
 			i++;
 		}
-		ft_swap_a(stack_a);
+		//ft_swap_a(stack_a);
+		ft_push_b(&stack_a, &stack_b);
+		ft_push_b(&stack_a, &stack_b);
 		ft_print_list(stack_a);
-		ft_printf("_\na\n");
+		ft_printf("\n");
+		ft_print_list(stack_b);
+		
+		ft_printf("after swaping to b\n");
+
+		ft_push_a(&stack_a, &stack_b);
+		ft_push_a(&stack_a, &stack_b);
+
+		ft_print_list(stack_a);
+		ft_printf("\n");
+		ft_print_list(stack_b);
 	}
 }

@@ -21,5 +21,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void    ft_print_list(t_list *list);
 void    ft_swap_a(t_list *list);
 void    ft_swap_b(t_list *list);
+void    ft_swap_a_b(t_list *list1, t_list *list2);
+void    ft_push_a(t_list **stack_a, t_list **stack_b);
+void    ft_push_b(t_list **stack_a, t_list **stack_b);
 
 #endif
