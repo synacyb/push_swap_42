@@ -1,6 +1,22 @@
 #include "libft/libft.h"
 #include "ft_printf/ft_printf.h"
 
+int check_argument(char **argv)
+{
+	int i = 1;
+
+	while (argv[i])
+	{
+		if (ft_valid_arguments(argv[i]))
+		{
+			write(2, "Error\n", 6);
+			exit(1);
+		}
+		i++;
+	}
+	return 0;
+}
+
 int main(int arc, char **argv)
 {
 	if (arc > 1)
@@ -9,11 +25,14 @@ int main(int arc, char **argv)
 		int number;
 
 		t_list	*stack_a;
-		t_list	*stack_b;
+		//t_list	*stack_b;
 		t_list	*actual_node = NULL;
 
 		stack_a = NULL;
-		stack_b = NULL;
+		//stack_b = NULL;
+		i = 1;
+		//check if the arguments  is valid !
+		check_argument(argv);
 		i = 1;
 		while (argv[i])
 		{
@@ -26,19 +45,24 @@ int main(int arc, char **argv)
 			i++;
 		}
 		//ft_swap_a(stack_a);
-		ft_push_b(&stack_a, &stack_b);
-		ft_push_b(&stack_a, &stack_b);
-		ft_print_list(stack_a);
-		ft_printf("\n");
-		ft_print_list(stack_b);
+		// ft_push_b(&stack_a, &stack_b);
+		// ft_push_b(&stack_a, &stack_b);
+		// ft_print_list(stack_a);
+		// ft_printf("\n");
+		// ft_print_list(stack_b);
 		
-		ft_printf("after swaping to b\n");
+		// ft_printf("after swaping to b\n");
 
-		ft_push_a(&stack_a, &stack_b);
-		ft_push_a(&stack_a, &stack_b);
+		// ft_push_a(&stack_a, &stack_b);
+		// ft_push_a(&stack_a, &stack_b);
 
+		// ft_print_list(stack_a);
+		// ft_printf("\n");
+		// ft_print_list(stack_b);
 		ft_print_list(stack_a);
-		ft_printf("\n");
-		ft_print_list(stack_b);
+		ft_printf("\nafter using ra :\n");
+		ft_rotate_a(&stack_a);
+		ft_print_list(stack_a);
+		ft_free_stack(&stack_a);
 	}
 }
