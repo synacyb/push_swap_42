@@ -23,17 +23,14 @@ int main(int arc, char **argv)
 	{
 		int i;
 		int number;
-
 		t_list	*stack_a;
-		//t_list	*stack_b;
+		t_list	*stack_b;
+	
 		t_list	*actual_node = NULL;
-
 		stack_a = NULL;
-		//stack_b = NULL;
+		stack_b = NULL;
 		i = 1;
-		//check if the arguments  is valid !
 		check_argument(argv);
-		i = 1;
 		while (argv[i])
 		{
 			number = ft_atoi(argv[i]);
@@ -44,8 +41,6 @@ int main(int arc, char **argv)
 				ft_lstadd_back(&stack_a, actual_node);
 			i++;
 		}
-		//ft_swap_a(stack_a);
-		// ft_push_b(&stack_a, &stack_b);
 		// ft_push_b(&stack_a, &stack_b);
 		// ft_print_list(stack_a);
 		// ft_printf("\n");
@@ -56,13 +51,24 @@ int main(int arc, char **argv)
 		// ft_push_a(&stack_a, &stack_b);
 		// ft_push_a(&stack_a, &stack_b);
 
-		// ft_print_list(stack_a);
 		// ft_printf("\n");
+		// ft_print_list(stack_a);
+
+		ft_printf("-----stack_a----\n");
+		ft_print_list(stack_a);
+		ft_push_b(&stack_a, &stack_b);
+		ft_push_b(&stack_a, &stack_b);
+		ft_printf("-----stack_b----\n");
+		ft_print_list(stack_b);
+		ft_swap_a_b(stack_a, stack_b);
+		ft_printf("\nafter :\n");
+		//ft_rotate_a(&stack_a);
+		ft_printf("-----stack_a----\n");
+		ft_print_list(stack_a);
+		ft_printf("-----stack_b----\n");
+		ft_print_list(stack_b);
+		// ft_print_list(stack_a);
 		// ft_print_list(stack_b);
-		ft_print_list(stack_a);
-		ft_printf("\nafter using ra :\n");
-		ft_rotate_a(&stack_a);
-		ft_print_list(stack_a);
 		ft_free_stack(&stack_a);
 	}
 }
