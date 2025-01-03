@@ -3,8 +3,9 @@ CFLAGS = -Wall -Wextra -Werror
 SRCS = ./libft/ft_atoi.c ./libft/ft_creat_node.c ./libft/ft_lstadd_back.c ./libft/ft_print_list.c libft/ft_swap.c\
 			ft_printf/ft_putnbr_fd.c ft_printf/ft_putstr_fd.c ft_printf/ft_printf.c ft_printf/ft_putchar_fd.c \
 			ft_printf/ft_puthxs_l.c ft_printf/ft_unsignedint.c ft_printf/ft_puthxs_u.c ft_printf/ft_putadress.c \
-			libft/ft_push_b.c libft/ft_push_a.c libft/ft_rotate_a.c libft/ft_free_stack.c \
-			libft/ft_valide_argument.c main.c
+			libft/ft_push_b.c libft/ft_push_a.c libft/ft_rotate.c libft/ft_free_stack.c \
+			libft/ft_valide_argument.c libft/ft_split.c libft/ft_strdup.c libft/ft_strlen.c \
+			libft/ft_substr.c libft/ft_strjoin.c libft/ft_memcpy.c main.c
 # BONUS =
 OBJS = $(SRCS:.c=.o)
 BOBJS = $(BONUS:.c=.o)

@@ -15,6 +15,5 @@ void ft_free_stack(t_list **stack)
 		free(current);
 		current = next;
 	}
-
 	*stack = NULL;
 }
